@@ -16,9 +16,11 @@
 
 Интерфейс AutoCloseable - 
 Сигнатура:
+```java
 public interface AutoCloseable {
     void close() throws Exception;
 }
+```
 AutoCloseable - это механизм позволяющий автоматичекси закрывать ресурсы, которые реализуют AutoCloseable. Т.е посл выхода из try все ресурсы автоматически закрываются , даже если произошло исключение. Надо создавать такие объекты внутри try(<--тут-->) {} catch() {} Мы реализуем данный интерфейс (метод close) и тогда сработает автоматически с помощью try-with-resources.
 
 Метод finalize() (Deprecated) -  является частью класса Object 
